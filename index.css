@@ -45,13 +45,35 @@ html, body {
     max-width: 780px;
 }
 
-#progress-bar {
+#controls {
+}
+#controls > button {
+    appearance: none;
+    background: none;
+    border: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--strahlendes-gelb);
-    transform: scaleX(0);
-    transform-origin: 0;
+    opacity: 0;
+    transition: opacity 2s 1s, transform .4s;
+}
+#controls.visible > button {
+    opacity: 1;
+}
+#controls > button:hover {
+    transform: translateY(-5px);
+}
+#controls #next-slide {
+    right: 10px;
+    top: 50%;
+    margin-top: -50px;
+}
+#controls #first-slide {
+    left: 10px;
+    bottom: 10px;
+}
+#controls.visible > #first-slide {
+    opacity: 0;
+}
+#controls #full-screen {
+    right: 10px;
+    top: 10px;
 }
