@@ -1,0 +1,7 @@
+{
+  "name": "poc-web",
+  "version": "1.0.0",
+  "devDependencies": {
+    "motion": "^10.16.4"
+  }
+}
